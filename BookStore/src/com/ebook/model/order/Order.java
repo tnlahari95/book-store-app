@@ -9,6 +9,9 @@ public class Order {
 	private List<OrderDetail> orderDetails = new ArrayList<OrderDetail>();
 	private boolean paymentReceived;
 	private String orderState = "Open";
+	private Payment payment;
+	
+	
 	
 	public Order() {}
 	
@@ -108,6 +111,14 @@ public class Order {
 			total += line.getProduct().getPrice() * line.getQuantity();
 		}
 		return total;
+	}
+
+	public Payment getPayment() {
+		return payment;
+	}
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
 	}
 
 }
