@@ -1,18 +1,16 @@
-public class PartnerInfo{
+public class Partner{
     private String name;
-    private String PartnerId;
+    private int PartnerId;
     private String password;
     private String email;
 
-
-    public PartnerInfo(String name, String partnerId, String password, String email) {
+    public PartnerInfo(String name, int partnerId, String password, String email) {
         this.name = name;
-        PartnerId = partnerId;
+        this.patnerId= partnerId;
         this.password = password;
         this.email = email;
     }
-
-    public String getName() {
+    public String getPartnerName() {
         return name;
     }
 
@@ -20,11 +18,11 @@ public class PartnerInfo{
         this.name = name;
     }
 
-    public String getPartnerId() {
+    public int getPartnerId() {
         return PartnerId;
     }
 
-    public void setPartnerId(String partnerId) {
+    public void setPartnerId(int partnerId) {
         PartnerId = partnerId;
     }
 

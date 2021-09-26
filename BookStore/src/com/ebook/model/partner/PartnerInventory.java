@@ -11,8 +11,6 @@ public class PartnerInventory{
         this.partnerIntentory = partnerIntentory;
     }
 
-    public void updateQuantity(){
 
-    }
 
 }
