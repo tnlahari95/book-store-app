@@ -11,7 +11,6 @@ public class Review {
 	
 	// Default Constructor
 	public Review() {
-
 	}
 
 	public Review(Integer reviewId, String title, String description, Integer rating, Customer customer) {
