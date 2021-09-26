@@ -15,7 +15,7 @@ public class PartnerService {
         }
     }
 
-    public void findPartnerById(String partnerID){
+    public void findPartnerById(int partnerID){
         try{
             PartnerInfo partner = partnerDAO.getPartner(partnerID);
             return partner;
@@ -24,6 +24,10 @@ public class PartnerService {
 
         }
         return null;
+    }
+
+    public void updateInventory(){
+
     }
 
 }
