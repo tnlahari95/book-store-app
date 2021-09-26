@@ -1,13 +1,13 @@
 
 import com.ebook.dal.PartnerDAO;
-import com.ebook.partner.PartnerInfo;
+import com.ebook.partner.Partner;
 
 public class PartnerService {
     private PartnerDAO partnerDAO = new PartnerDAO();
 
 
 
-    public void addPartner(PartnerInfo partner){
+    public void addPartner(Partner partner){
         try{
             partnerDAO.addPartner(partner);
         }catch (Exception ex){
