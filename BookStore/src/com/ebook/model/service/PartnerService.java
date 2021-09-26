@@ -26,8 +26,5 @@ public class PartnerService {
         return null;
     }
 
-    public void updateInventory(){
-
-    }
 
 }

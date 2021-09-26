@@ -38,7 +38,6 @@ public class PartnerDAO {
                 Partner_Pst.setString(2, Partner_Pst.getPartnerName());
                 Partner_Pst.setString(3, Partner_Pst.getEmail());
                 Partner_Pst.executeUpdate();
-
             } catch (SQLException ex) {
 
             } finally {

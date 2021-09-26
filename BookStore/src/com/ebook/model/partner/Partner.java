@@ -4,7 +4,6 @@ public class Partner{
     private String password;
     private String email;
 
-
     public PartnerInfo(String name, int partnerId, String password, String email) {
         this.name = name;
         this.patnerId= partnerId;
