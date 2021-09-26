@@ -18,7 +18,6 @@ public class PartnerDAO {
             } catch (SQLException ex) {
 
             } finally {
-
                 try {
                     if (con != null) {
                         con.close();

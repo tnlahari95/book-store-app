@@ -10,7 +10,6 @@ public class Partner{
         this.password = password;
         this.email = email;
     }
-
     public String getPartnerName() {
         return name;
     }
