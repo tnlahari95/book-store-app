@@ -30,7 +30,7 @@ public class DBHelper {
  
 		try {
  
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/bookstore", "book_store", "123");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstorecomp433", "book_store", "123");
 				Statement st = connection.createStatement();
 				ResultSet rs = st.executeQuery("SELECT VERSION()");
 

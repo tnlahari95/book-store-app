@@ -11,7 +11,7 @@ public class Partner{
         this.email = email;
     }
 
-    public String getName() {
+    public String getPartnerName() {
         return name;
     }
 
