@@ -1,15 +1,22 @@
-public class Partner{
+package com.ebook.model.partner;
+
+
+public class Partner {
     private String name;
-    private int PartnerId;
+    private int partnerId;
     private String password;
     private String email;
+    private PartnerInventory inventory;
 
-    public PartnerInfo(String name, int partnerId, String password, String email) {
+    public Partner(String name, int partnerId, String password, String email) {
+
         this.name = name;
-        this.patnerId= partnerId;
+        this.partnerId= partnerId;
         this.password = password;
         this.email = email;
+        this.inventory = new PartnerInventory();
     }
+
     public String getPartnerName() {
         return name;
     }
@@ -18,12 +25,12 @@ public class Partner{
         this.name = name;
     }
 
-    public int getPartnerId() {
-        return PartnerId;
+    public int getpartnerId() {
+        return partnerId;
     }
 
-    public void setPartnerId(int partnerId) {
-        PartnerId = partnerId;
+    public void setpartnerId(int partnerId) {
+        partnerId = partnerId;
     }
 
     public String getPassword() {
