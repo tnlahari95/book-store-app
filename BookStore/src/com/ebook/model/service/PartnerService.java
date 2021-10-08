@@ -1,11 +1,11 @@
 
+package com.ebook.model.service;
+
 import com.ebook.dal.PartnerDAO;
-import com.ebook.partner.Partner;
+import com.ebook.model.partner.Partner;
 
 public class PartnerService {
     private PartnerDAO partnerDAO = new PartnerDAO();
-
-
 
     public void addPartner(Partner partner){
         try{
@@ -15,9 +15,9 @@ public class PartnerService {
         }
     }
 
-    public void findPartnerById(int partnerID){
+    public Partner findPartnerById(int partnerID){
         try{
-            PartnerInfo partner = partnerDAO.getPartner(partnerID);
+            Partner partner = partnerDAO.findPartnerById(partnerID);
             return partner;
         }catch(Exception ex){
             System.out.println("Partner Service: Couldn't find a partner by ID.");
@@ -25,6 +25,4 @@ public class PartnerService {
         }
         return null;
     }
-
-
 }
