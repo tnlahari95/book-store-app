@@ -12,7 +12,7 @@ public class PartnerDAO {
    
    
    public void addPartner(Partner partner) {
-	  int id = partner.getPartnerId();
+	  int id = partner.getpartnerId();
 	  partners.put(id,partner);
    }
    
@@ -25,6 +25,7 @@ public class PartnerDAO {
 	   partners.remove(partner);
 
    }
+}
     
 
    
