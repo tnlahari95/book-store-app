@@ -1,11 +1,9 @@
-package com.ebook.model.service;
+package com.ebook.model.partner;
 import com.ebook.dal.PartnerDAO;
-import com.ebook.model.partner.Partner;
-//this class is a Facade between Partner and PartnerDAO classes
 
 
 
-public class PartnerService {
+public class Partner_Manager {
     private PartnerDAO partnerDAO = new PartnerDAO();
 
     public void addPartner(Partner partner){

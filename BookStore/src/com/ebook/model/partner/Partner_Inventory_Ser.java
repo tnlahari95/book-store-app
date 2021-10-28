@@ -1,8 +1,7 @@
-package com.ebook.model.service;
+package com.ebook.model.partner;
 
 import com.ebook.dal.PartnerInventoryDAO;
 import com.ebook.model.item.Product;
-import com.ebook.model.partner.Inventory;
 
 public class Partner_Inventory_Ser implements Inventory{
 	private PartnerInventoryDAO inventory1= new PartnerInventoryDAO();
