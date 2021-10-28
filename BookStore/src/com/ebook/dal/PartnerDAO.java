@@ -19,15 +19,20 @@ public class PartnerDAO {
    public Partner findPartnerById(int id) {
 	 return partners.get(id);
    }
-   
-   
-   public void removePartner(Partner partner) {
-	   partners.remove(partner);
+    
+   public void removePartner(int id) {
+	   partners.remove(id);
 
+   }
+   public void updatePartnerEmail(int id, String newEmail) {
+	   Partner partner = findPartnerById(id);
+	   partner.setEmail(newEmail);   
+   }
+   
+   public void resetPartnerPassword(int id,String newPassword) {
+	   Partner partner = findPartnerById(id);
+	   partner.setPassword(newPassword);
+	   
    }
 }
     
-
-   
-   
-   

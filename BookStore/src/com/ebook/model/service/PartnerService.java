@@ -1,8 +1,9 @@
-
 package com.ebook.model.service;
-
 import com.ebook.dal.PartnerDAO;
 import com.ebook.model.partner.Partner;
+//this class is a Facade between Partner and PartnerDAO classes
+
+
 
 public class PartnerService {
     private PartnerDAO partnerDAO = new PartnerDAO();
@@ -25,4 +26,28 @@ public class PartnerService {
         }
         return null;
     }
+    
+    
+    public void removePartner(int id) {
+    	try {
+     		partnerDAO.removePartner(id);
+    	}catch(Exception ex) {
+    		 System.out.println("Partner Service: Couldn't delete a partner.");	
+    	}	
+    }
+    
+    public void updatePartnerPassword(int id, String newPassword) {
+    	try {
+    		partnerDAO.resetPartnerPassword(id, newPassword);	
+    	}catch(Exception ex) {
+   		 System.out.println("Partner Service: Couldn't update password for"+ findPartnerById(id));	
+     	}	
+    	
+    }
+    
+    public void updatePartnerEmail(int id, String newEmail) {
+    	partnerDAO.updatePartnerEmail(id, newEmail);
+    	
+    }
+    
 }
