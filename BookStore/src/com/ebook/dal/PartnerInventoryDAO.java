@@ -6,8 +6,8 @@ import java.util.Map;
 import com.ebook.model.item.Product;
 import com.ebook.model.partner.Inventory;
 
-public class PartnerInventory implements Inventory{
-	public PartnerInventory() {
+public class PartnerInventoryDAO implements Inventory{
+	public PartnerInventoryDAO() {
 		
 	}
 
