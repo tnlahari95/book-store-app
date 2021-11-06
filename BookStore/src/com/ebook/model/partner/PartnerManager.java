@@ -1,20 +1,18 @@
 package com.ebook.model.partner;
 import com.ebook.dal.PartnerDAO;
 
-
-
 public class PartnerManager {
     private PartnerDAO partnerDAO = new PartnerDAO();
 
-    public void addPartner(Partner partner){
-        try{
-            partnerDAO.addPartner(partner);
-        }catch (Exception ex){
-            System.out.println("Partner service:Threw an error adding a partner account.");
-        }
+    
+    public Partner addPartner(String name, String partnerInfo){
+        
+        Partner partner =  partnerDAO.addPartner(name,partnerInfo);
+          return partner;
+          
     }
 
-    public Partner findPartnerById(int partnerID){
+    public Partner findPartnerById(String partnerID){
         try{
             Partner partner = partnerDAO.findPartnerById(partnerID);
             return partner;
@@ -26,7 +24,7 @@ public class PartnerManager {
     }
     
     
-    public void removePartner(int id) {
+    public void removePartner(String id) {
     	try {
      		partnerDAO.removePartner(id);
     	}catch(Exception ex) {
@@ -34,18 +32,14 @@ public class PartnerManager {
     	}	
     }
     
-    public void updatePartnerPassword(int id, String newPassword) {
-    	try {
-    		partnerDAO.resetPartnerPassword(id, newPassword);	
-    	}catch(Exception ex) {
-   		 System.out.println("Partner Service: Couldn't update password for"+ findPartnerById(id));	
-     	}	
-    	
-    }
     
-    public void updatePartnerEmail(int id, String newEmail) {
-    	partnerDAO.updatePartnerEmail(id, newEmail);
-    	
+    public Set<Partner> getAllPartners(){
+    	try {
+    		return partnerDAO.getAllPartners();	
+    	}catch(Exception ex) {
+   		 	System.out.println("Partner Service: Couldn't find the list of partners");	
+     	}
+    	return null; 	
     }
     
 }
