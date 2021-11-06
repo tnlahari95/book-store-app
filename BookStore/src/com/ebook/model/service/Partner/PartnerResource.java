@@ -36,7 +36,6 @@ public class PartnerResource {
 	@GET
 	@Produces({"application/xml" , "application/json"})
 	@Path("/partners")
-	//@Cacheable(cc="public, maxAge=3600") example for caching
 	public Set<PartnerRepresentation> getEmployees() {
 		System.out.println("GET METHOD Request for all employees .............");
 		PartnerActivity partnerActivity = new PartnerActivity();
