@@ -18,8 +18,6 @@ import com.ebook.model.service.Partner.representation.PartnerRepresentation;
 import com.ebook.model.service.Partner.representation.PartnerRequest;
 import com.ebook.model.service.Partner.workflow.PartnerActivity;
 
-// define api from developers perspective 
-
 
 @Path("/partnerservice/")
 public class PartnerResource {
@@ -34,18 +32,16 @@ public class PartnerResource {
 		return partnerActivity.getPartnerById(partnerID);
 	}
 	
-	/*@GET
+
+	@GET
 	@Produces({"application/xml" , "application/json"})
 	@Path("/partners")
-	public List<PartnerRepresentation> getAllPartners(@QueryParam("offset") int offset, @QueryParam("limit") int limit){
-		// won't allow a request for 0 addresses, so default to 5
-		if (limit == 0) {
-			limit = 5;
-		}
-		System.out.println("GET METHOD Request from Client for Get All Partners with offset " + offset + " and limit "+ limit);
-		PartnerActivity pActivity = new PartnerActivity();
-		return pActivity.getAllPartners(offset, limit);
-	}*/
+	//@Cacheable(cc="public, maxAge=3600") example for caching
+	public Set<PartnerRepresentation> getEmployees() {
+		System.out.println("GET METHOD Request for all employees .............");
+		PartnerActivity partnerActivity = new PartnerActivity();
+		return partnerActivity.getPartners();	
+	}
 
 	@POST
 	@Produces({"application/xml" , "application/json"})
@@ -69,25 +65,6 @@ public class PartnerResource {
 		return null;
 	}
 	
-	/*@PUT
-	@Produces({"application/xml" , "application/json"})
-	@Path("/partners/name")
-	public PartnerRepresentation updatePartnerName(PartnerRequest pReq) {
-		System.out.println("PUT METHOD Request from Client for Update Partner Name");
-		PartnerActivity pActivity = new PartnerActivity();
-		return pActivity.updatePartnerName(pReq);
-		
-	}
-	
-	@PUT
-	@Produces({"application/xml" , "application/json"})
-	@Path("/partners/details")
-	public !!!! updatePartnerDetails(PartnerRequest pReq) {
-		System.out.println("PUT METHOD Request from Client for Update Partner Details");
-		PartnerActivity pActivity = new PartnerActivity();
-		return pActivity.updatePartnerDetails(pReq);
-	}*/
-
 }
 
 
