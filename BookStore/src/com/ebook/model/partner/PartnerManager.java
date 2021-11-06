@@ -3,49 +3,42 @@ import com.ebook.dal.PartnerDAO;
 
 
 
-public class PartnerManager {
-    private PartnerDAO partnerDAO = new PartnerDAO();
+public class PartnerDAO {
+    public PartnerDAO(){}
+    
+   private static HashMap<String,Partner>partners = new HashMap<>();
+   
+   
+   public Partner addPartner(String name, String partnerInfo) {
+	   
+	  Partner partner = new Partner(name, partnerInfo);
+	  
+	  Random randomGenerator = new Random();
+	  int randomInt = randomGenerator.nextInt(10000);
+	  String id = "PI" + randomInt;
+	  
+	  partner.setpartnerId(id);
+	 
+	  partners.put(id,partner);
+	  return partner;
+   }
+   
+   public Partner findPartnerById(String id) {
+	 return partners.get(id);
+   }
+    
+   public void removePartner(String id) {
+	   partners.remove(id);
+	  
+   }
 
-    public void addPartner(Partner partner){
-        try{
-            partnerDAO.addPartner(partner);
-        }catch (Exception ex){
-            System.out.println("Partner service:Threw an error adding a partner account.");
-        }
-    }
-
-    public Partner findPartnerById(int partnerID){
-        try{
-            Partner partner = partnerDAO.findPartnerById(partnerID);
-            return partner;
-        }catch(Exception ex){
-            System.out.println("Partner Service: Couldn't find a partner by ID.");
-
-        }
-        return null;
-    }
-    
-    
-    public void removePartner(int id) {
-    	try {
-     		partnerDAO.removePartner(id);
-    	}catch(Exception ex) {
-    		 System.out.println("Partner Service: Couldn't delete a partner.");	
-    	}	
-    }
-    
-    public void updatePartnerPassword(int id, String newPassword) {
-    	try {
-    		partnerDAO.resetPartnerPassword(id, newPassword);	
-    	}catch(Exception ex) {
-   		 System.out.println("Partner Service: Couldn't update password for"+ findPartnerById(id));	
-     	}	
-    	
-    }
-    
-    public void updatePartnerEmail(int id, String newEmail) {
-    	partnerDAO.updatePartnerEmail(id, newEmail);
-    	
-    }
-    
+   
+   public Set<Partner>getAllPartners(){
+	   Set<Partner> partners = new HashSet<>();
+	   Iterator<Partner>partner = partners.iterator();
+	   while(partner.hasNext()) {
+		   partners.add((Partner) partner);
+	   }
+	   return partners;
+   }
 }
