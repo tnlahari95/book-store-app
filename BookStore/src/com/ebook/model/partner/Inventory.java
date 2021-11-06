@@ -1,3 +1,4 @@
+
 package com.ebook.model.partner;
 
 import com.ebook.model.item.Product;
