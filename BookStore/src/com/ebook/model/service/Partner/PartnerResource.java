@@ -25,7 +25,7 @@ public class PartnerResource {
 		
 	@GET
 	@Produces({"application/xml" , "application/json"})
-	@Path("/partners/{partnerID}")
+	@Path("/partner/{partnerID}")
 	public PartnerRepresentation getPartnerByID(@PathParam("partnerID") String partnerID) {
 		System.out.println("GET METHOD Request from Client to Get Partner");
 		PartnerActivity partnerActivity = new PartnerActivity();
@@ -37,14 +37,14 @@ public class PartnerResource {
 	@Produces({"application/xml" , "application/json"})
 	@Path("/partners")
 	public Set<PartnerRepresentation> getEmployees() {
-		System.out.println("GET METHOD Request for all employees .............");
+		System.out.println("GET METHOD Request for all partners .............");
 		PartnerActivity partnerActivity = new PartnerActivity();
 		return partnerActivity.getPartners();	
 	}
 
 	@POST
 	@Produces({"application/xml" , "application/json"})
-	@Path("/partners")
+	@Path("/partner")
 	public PartnerRepresentation createPartner(PartnerRequest partnRequest) {
 		System.out.println("POST METHOD Request from Client with ............." + partnRequest.getPartnerName());
 		PartnerActivity partnerActivity = new PartnerActivity();
@@ -53,7 +53,7 @@ public class PartnerResource {
 	
 	@DELETE
 	@Produces({"application/xml" , "application/json"})
-	@Path("/partners/{partnerID}")
+	@Path("/partner/{partnerID}")
 	public Response deletePartner(@PathParam("partnerID") String partnerID) {
 		System.out.println("Delete METHOD Request from Client with partner Request String ............." + partnerID);
 		PartnerActivity partnerActivity = new PartnerActivity();
