@@ -12,6 +12,31 @@ public class PartnerInventory {
 		this.inventoryDAO = new PartnerInventoryDAO();
 		
 	}
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public PartnerInventoryDAO getInventoryDAO() {
+		return inventoryDAO;
+	}
+
+	public void setInventoryDAO(PartnerInventoryDAO inventoryDAO) {
+		this.inventoryDAO = inventoryDAO;
+	}
+
+	
 	
 	PartnerInventory(Product product, int quantity){
 		this.product = product;

@@ -1,7 +1,7 @@
 package com.ebook.model.partner;
+import java.util.Set;
+
 import com.ebook.dal.PartnerDAO;
-
-
 
 public class PartnerDAO {
     public PartnerDAO(){}
