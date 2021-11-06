@@ -3,7 +3,7 @@ import com.ebook.dal.PartnerDAO;
 
 
 
-public class Partner_Manager {
+public class PartnerManager {
     private PartnerDAO partnerDAO = new PartnerDAO();
 
     public void addPartner(Partner partner){

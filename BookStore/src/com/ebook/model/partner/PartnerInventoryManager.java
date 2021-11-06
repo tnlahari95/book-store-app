@@ -3,7 +3,7 @@ package com.ebook.model.partner;
 import com.ebook.dal.PartnerInventoryDAO;
 import com.ebook.model.item.Product;
 
-public class Partner_Inventory_Ser implements Inventory{
+public class PartnerInventoryManager implements Inventory{
 	private PartnerInventoryDAO inventory1= new PartnerInventoryDAO();
 
 	@Override
