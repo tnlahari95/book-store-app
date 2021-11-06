@@ -1,13 +1,7 @@
-package com.ebook.dal;
-
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
+package com.ebook.model.partner;
 import java.util.Set;
 
-import com.ebook.model.partner.Partner;
+import com.ebook.dal.PartnerDAO;
 
 public class PartnerDAO {
     public PartnerDAO(){}
@@ -48,4 +42,3 @@ public class PartnerDAO {
 	   return partners;
    }
 }
-    

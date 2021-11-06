@@ -1,20 +1,46 @@
 package com.ebook.model.partner;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import com.ebook.dal.PartnerInventoryDAO;
 import com.ebook.model.item.Product;
 
-public class PartnerInventory{
+public class PartnerInventory {
+	private Product product;
+	private int quantity;
+	private PartnerInventoryDAO inventoryDAO;
+	
+	PartnerInventory(){
+		this.inventoryDAO = new PartnerInventoryDAO();
+		
+	}
+	public Product getProduct() {
+		return product;
+	}
 
-    // Integer value is for keeping track of remain quantity of the product.
-    Map <Product,Integer> partnerIntentory = new HashMap<>();
+	public void setProduct(Product product) {
+		this.product = product;
+	}
 
-    public void addProduct(Product product, int quantity) {
+	public int getQuantity() {
+		return quantity;
+	}
 
-    }
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
+	public PartnerInventoryDAO getInventoryDAO() {
+		return inventoryDAO;
+	}
 
+	public void setInventoryDAO(PartnerInventoryDAO inventoryDAO) {
+		this.inventoryDAO = inventoryDAO;
+	}
 
+	
+	
+	PartnerInventory(Product product, int quantity){
+		this.product = product;
+		this.quantity = quantity;
+	}
 
 }
