@@ -3,8 +3,6 @@ import java.util.Set;
 
 import com.ebook.dal.PartnerDAO;
 
-
-
 public class PartnerManager {
     private PartnerDAO partnerDAO = new PartnerDAO();
 

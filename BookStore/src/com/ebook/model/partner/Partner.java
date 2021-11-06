@@ -33,6 +33,7 @@ public class Partner {
     public String getPartnerInfo() {
 		return partnerInfo;
 	}
+<<<<<<< HEAD
 
 	public void setPartnerInfo(String partnerInfo) {
 		this.partnerInfo = partnerInfo;
@@ -44,3 +45,11 @@ public class Partner {
 
 	
 }
+=======
+
+	public void setPartnerInfo(String partnerInfo) {
+		this.partnerInfo = partnerInfo;
+	}
+
+}
+>>>>>>> ea9124fe4d8851bab92cebf41a87c46ad7065b41
