@@ -1,29 +1,30 @@
 package com.ebook.model.service.Partner.representation;
 
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "PartnerRequest")
+
+
+@XmlRootElement(name = "Partner")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
-public class PartnerRequest {
-	private int partnerID;
+public class PartnerRepresentation  {
+	private String partnerID;
 	private String partnerName;
 	private String partnerInfo;
 	
-	public PartnerRequest(){
+	public PartnerRepresentation(){
 		
 	}
 
-	public int getPartnerID() {
+	public String getPartnerID() {
 		return partnerID;
 	}
 	
-	public void setPartnerID(int partnerID) {
-		this.partnerID = partnerID;
+	public void setPartnerID(String id) {
+		this.partnerID = id;
 	}
 	
 	public String getPartnerName() {
@@ -33,8 +34,6 @@ public class PartnerRequest {
 	public void setPartnerName(String partnerName) {
 		this.partnerName = partnerName;
 	}
-
-
 	public String getPartnerInfo() {
 		return partnerInfo;
 	}
@@ -44,3 +43,4 @@ public class PartnerRequest {
 	}
 
 }
+
