@@ -36,7 +36,7 @@ public class PartnerResource {
 	@GET
 	@Produces({"application/xml" , "application/json"})
 	@Path("/partners")
-	public Set<PartnerRepresentation> getEmployees() {
+	public Set<PartnerRepresentation> getPartners() {
 		System.out.println("GET METHOD Request for all partners .............");
 		PartnerActivity partnerActivity = new PartnerActivity();
 		return partnerActivity.getPartners();	
