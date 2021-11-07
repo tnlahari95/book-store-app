@@ -32,6 +32,17 @@ Delete customer:
 ```
 
 # Below are some sample requests and responses
+
+```CustomerRequest ``` sample :
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomerRequest>
+        <firstName>John</firstName>
+        <lastName>Smith</lastName>
+</CustomerRequest>
+```
+
 ```Customer ``` sample :
 
 ```
@@ -69,7 +80,7 @@ Delete a partner:
 ```
 # Below are some sample requests and responses
 ```PartnerRequest``` sample :
-```
+
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PartnerRequest>
@@ -78,6 +89,7 @@ Delete a partner:
 </PartnerRequest>
 ```
 ```Partner```sample:
+
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Partner>
