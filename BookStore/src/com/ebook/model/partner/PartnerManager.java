@@ -41,14 +41,4 @@ public class PartnerDAO {
 	   }
 	   return partners;
    }
-	
-  public Partner updatePartnerName(String partnerID, String partnerName) {
-	PartnerDAO pd = new PartnerDAO();
-	return pd.updatePartnerName(partnerID, partnerName);
- }
-	
- public Partner updatePartnerDetails(String partnerID, String partnerDetails) {
-	PartnerDAO pd = new PartnerDAO();
-	return pd.updatePartnerDetails(partnerID, partnerDetails);
-	}
 }
