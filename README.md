@@ -57,6 +57,7 @@ Delete customer:
 # Partner
 
 The Partner endpoint has the following URIs and corresponding methods:
+
 Get partner by ID:
 ```
 @GET
