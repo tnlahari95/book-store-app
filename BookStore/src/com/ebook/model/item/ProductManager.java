@@ -1,57 +1,67 @@
 package com.ebook.model.item;
 
-import java.util.List;
+//import java.util.List;
+import java.util.Set;
 
 import com.ebook.dal.ProductDAO;
-import com.ebook.model.item.Product;
+//import com.ebook.model.item.Product;
 
-public class ProductManager implements IProductManager{
-	private ProductDAO productDAO = new ProductDAO();
-
-
-
-    public void AddProduct(Product product){
-        try{
-            productDAO.AddProduct(product);
+//public class ProductManager implements IProductManager{
+public class ProductManager implements IProductManager {
+	
+	
+	private static ProductDAO productDAO = new ProductDAO();
+	
+	@Override
+	public Set<Product> getAllProducts(){
+        
+           return productDAO.getAllProducts();
+        
+    }
+    
+	@Override
+    public Product getProductById(String productId){
+        
+            return productDAO.getProductById(productId);     
+    }
+    
+	@Override
+    //void-no return-product object
+    public Product AddProduct(String prodTitle, String prodDesc, double prodprice, String prodAuthor){
+      /*  try{
+          productDAO.AddProduct(prodTitle, prodDesc, prodprice);
         }catch (Exception ex){
             System.out.println("Product service:Threw an error adding a product.");
         }
+        return product;		*/
+    	
+    	Product pm = productDAO.AddProduct(prodTitle, prodDesc, prodprice, prodAuthor);
+    	
+		
+		return pm;
     }
-    
-    public void UpdateProduct(Product product){
-        try{
+	
+	@Override
+    //product object
+    public void UpdateProduct(String productId, String prodTitle, String prodDesc, double prodprice, String prodAuthor){
+      /*  try{
             productDAO.UpdateProduct(product);
         }catch (Exception ex){
             System.out.println("Product service:Threw an error updating a product.");
-        }
+        }*/
+    	productDAO.UpdateProduct(productId, prodTitle, prodDesc, prodprice, prodAuthor);
+    	
     }
     
-    public void removeProduct(Product product){
-        try{
-            productDAO.removeProduct(product);
-        }catch (Exception ex){
-            System.out.println("Product service:Threw an error removing a product.");
-        }
-    }
-
-    public void getAllProducts(){
-        try{
-           productDAO.getAllProducts();
-        }catch(Exception ex){
-            System.out.println("Product Service: Couldn't find a product");
-        }
+   //void-no return
+    public void removeProduct(String productId){
+    
+            productDAO.removeProduct(productId);
     }
     
-    public Product getProductById(String productId){
-        try{
-            productDAO.getProductById(productId);
-        }catch(Exception ex){
-            System.out.println("Product Service: Couldn't find a product by Id");
-        }
-        return null;
-    }
+}
 
-	@Override
+	/*@Override
 	public void Add(Object object) {
 		// TODO Auto-generated method stub
 		productDAO.AddProduct((Product)object);
@@ -84,6 +94,6 @@ public class ProductManager implements IProductManager{
 		productDAO.getProductById((String)objectid);
 	}
 
-}
+}*/
     
     

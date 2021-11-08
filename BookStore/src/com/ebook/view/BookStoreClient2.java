@@ -1,15 +1,15 @@
-package com.ebook.view;
+/*package com.ebook.view;
 
 import com.ebook.model.customer.Address;
 import com.ebook.model.customer.Customer;
-import com.ebook.model.service.CustomerService;
+import com.ebook.model.customer.CustomerManager;
 
 public class BookStoreClient2 {
 	public static void main (String args[]) throws Exception {
 		
 		//Client will use the customer service to have access to anything related to customer functionality.
 	      System.out.println("*************** Creating Customer service object *************************");
-		CustomerService custService = new CustomerService();    
+		CustomerManager custService = new CustomerManager();    
 /**
 		System.out.println("BookStoreClient2: *************** instantiating a customer and its address *************************");
         Customer customer = new Customer();;
@@ -31,7 +31,7 @@ public class BookStoreClient2 {
         
         System.out.println("BookStoreClient2: *************** Customer is inserted in BookStore Database *************************");
 **/
-         System.out.println("BookStoreClient2: *************** trying to search customer in the database *************************");
+ /*        System.out.println("BookStoreClient2: *************** trying to search customer in the database *************************");
  
       //Find a customer if already exists; if not, create a new one.
       Customer searchedCustomer = custService.findCustomerById("XY8888"); 
@@ -48,3 +48,4 @@ public class BookStoreClient2 {
         
 	}
 }
+*/

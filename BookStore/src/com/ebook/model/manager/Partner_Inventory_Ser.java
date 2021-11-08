@@ -1,10 +1,11 @@
-package com.ebook.model.partner;
+package com.ebook.model.manager;
 
-import com.ebook.dal.PartnerInventoryDAO;
+import com.ebook.dal.PartnerInventory;
 import com.ebook.model.item.Product;
+import com.ebook.model.partner.Inventory;
 
 public class Partner_Inventory_Ser implements Inventory{
-	private PartnerInventoryDAO inventory1= new PartnerInventoryDAO();
+	private PartnerInventory inventory1= new PartnerInventory();
 
 	@Override
 	public void addProduct(Product product, int quantity) {

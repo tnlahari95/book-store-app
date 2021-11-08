@@ -37,7 +37,7 @@ public class OrderDAO {
 			Product newProduct = new Product();
 			Product product = orderdetail.getProduct();
 			
-			newProduct.setId(product.getId());
+			newProduct.setproductId(product.getproductId());
 			newProduct.setPrice(product.getPrice());
 			newProduct.setTitle(product.getTitle());
 			

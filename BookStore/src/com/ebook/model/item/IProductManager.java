@@ -1,14 +1,25 @@
 package com.ebook.model.item;
 
+import java.util.Set;
+
 public interface IProductManager {
 	
-	public void Add(Object object);
+	public Set<Product> getAllProducts();
 	
-	public void Update(Object object);
+	public Product getProductById(String productId);
 	
-	public void remove(Object object);
+	public Product AddProduct(String prodTitle, String prodDesc, double prodprice, String prodAuthor);
 	
-	public void getAll();
+	public void UpdateProduct(String productId, String prodTitle, String prodDesc, double prodprice, String prodAuthor);
 	
-	public void getById(Object objectid);
+	
+	//public void Add(Object object);
+	
+	//public void Update(Object object);
+	
+	//public void remove(Object object);
+	
+	//public void getAll();
+	
+	//public void getById(Object objectid);
 }

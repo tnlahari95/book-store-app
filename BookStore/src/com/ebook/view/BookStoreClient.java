@@ -40,7 +40,7 @@ public class BookStoreClient {
 	        
 	        //First product
 	        Book product1 = new Book();
-	        product1.setId("BF-7898");
+	        product1.setproductId("BF-7898");
 	        product1.setISBN("234-89675-27690");
 	        product1.setTitle("Patterns of Enterprise Application Architecture");
 	        product1.setAuthor("Folwer, Martin");
@@ -51,7 +51,7 @@ public class BookStoreClient {
 	        
 	        //Second product
 	        Book product2 = new Book();
-	        product2.setId("BF-2345");
+	        product2.setproductId("BF-2345");
 	        product2.setISBN("892-12345-93667");
 	        product2.setTitle("Web Application Architecture");
 	        product2.setAuthor("Shklar, Leon");
@@ -64,7 +64,7 @@ public class BookStoreClient {
 	        
 	      //Third product
 	        Book product3 = new Book();
-	        product3.setId("BF-234212");
+	        product3.setproductId("BF-234212");
 	        product3.setISBN("892-123445-93667");
 	        product3.setTitle("testingar Architecture");
 	        product3.setAuthor("gmg, dogecoin");
