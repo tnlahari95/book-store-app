@@ -1,9 +1,15 @@
 package com.ebook.model.order;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.ebook.model.item.Product;
 
+
+@XmlRootElement
 public class Order {
 	private String orderId;
 	private List<OrderDetail> orderDetails = new ArrayList<OrderDetail>();
